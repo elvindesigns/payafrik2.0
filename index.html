@@ -9,11 +9,45 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/particles.min.js"></script>
     <script src="./js/myscript.js"></script>
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- scripts -->
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- stats.js -->
+    <script src="js/lib/stats.js"></script>
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats();
+      stats.setMode(0);
+      stats.domElement.style.position = "absolute";
+      stats.domElement.style.left = "0px";
+      stats.domElement.style.top = "0px";
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector(".js-count-particles");
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (
+          window.pJSDom[0].pJS.particles &&
+          window.pJSDom[0].pJS.particles.array
+        ) {
+          count_particles.innerText =
+            window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+
     <nav class="navbar navbar-inverse  navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -27,7 +61,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="#top"
             ><img src="./img/logo.png" alt=""
           /></a>
         </div>
@@ -62,7 +96,7 @@
         </div>
       </div>
     </nav>
-    <header>
+    <header id="top">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 col-md-7 col-sm-push-5">
@@ -80,12 +114,13 @@
                 </h2>
                 <div class="divider"></div>
                 <p>
-                  Which provides payment solutions for the unbanked, access to
+                  Which provides payment solution for the Unbanked, access to
                   global funding, cross boarder transactions, digital exchange
-                  market, e -commerce and global logistic services.
+                  market, e-commerce, global logistics services and investment
+                  opportunities.
                 </p>
-                <a href="#what-payafrik-stop">
-                  <img src="./img/read more.png" alt="" />
+                <a href="#what-payafrik-stop" class="link">
+                  <p class="styled">Read More</p>
                 </a>
               </div>
             </div>
@@ -105,19 +140,18 @@
                 <span class="bold">Novel Solution</span>
               </h3>
               <h4>
-                helping merchants and users utilise cryptocurrencies for
-                payments by engaging with traditional banking and payment
-                services while eliminating the risk of price fluctuations
+                Helping merchants and users utilise the verities of blockchain
+                technology for value exchange by implementing seamless smart
+                services while eliminating the risk of price fluctuations.
               </h4>
               <p>
-                By using the native PayAfrik token called AfrikCoin (AFK), we
-                are focused on building an extensive, decentralised online
+                We are focused on building an extensive, decentralised online
                 banking protocol which would disrupt conventional banks while
                 providing traditional services for retail and institutional
                 users. We are made up of a team that has expert understanding
                 and vast experience in programming and software development,
-                blockchain technology and cryptocurrency, and also finance and
-                investment.
+                blockchain technology and cryptocurrency, e-commerce, finance
+                and investment.
               </p>
               <img id="stars" src="./img/stars.png" alt="" />
               <div class="functions">
@@ -155,9 +189,9 @@
             <div class="left-side">
               <h3>Problem & Solution</h3>
               <p>
-                We are solving the Africa's biggest blockchain issues
-                surrounding cross-border payments, data accessibility and
-                payment.
+                We are solving Africa's biggest banking issues surrounding
+                cross-border remittances, financial inclusion and data valuation
+                using Blockchain.
               </p>
               <div class="divider"></div>
               <h4>Evolution of Cryptocurrency</h4>
@@ -167,15 +201,15 @@
                 speculators but for everyday users who transact value equivalent
                 to millions of dollars daily.
               </p>
-              <h4>Problem in Africa</h4>
+              <h4>FINTECH Challenge in Africa</h4>
               <p>
                 Traditionally, Africa has lagged behind when new technology has
                 been introduced in the developed world to aid business strategy.
-                But with cryptocurrencies, it is obvious that cryptocurrency
-                users in Africa need a better payment system that can help them
-                accept cryptocurrencies as seamlessly as cash and card payments,
-                while hedging against the risk of price fluctuations due to
-                cryptocurrency volatility.
+                Poor financial inclusion parameters, cross-border payment
+                hitches, low investment interest, etc contribute to the numerous
+                fintech challenges faced in developing countries. But with the
+                advent of blockchain and cryptocurrencies, it is obvious that
+                these challenges are set to expire in no distant time.
               </p>
             </div>
           </div>
@@ -189,17 +223,13 @@
                   with PayAfrik
                 </h3>
                 <p>
-                  There are a number of solutions created to enable Africans use
-                  cryptocurrencies with ease, but the greatest challenge has
-                  been the business loss from cryptocurrency payments declining
-                  in value.
-                </p>
-
-                <p>
-                  Enter PayAfrik with a novel solution to this problem by
-                  helping merchants and users utilise cryptocurrencies for
-                  payments by engaging with traditional banking and payment
-                  services while eliminating the risk of price fluctuations.
+                  Payafrik has launched a number of solutions to enable Africans
+                  utilize this technology to solve these traditional problems
+                  with ease. Ranging from smart contracts capabilities, payafrik
+                  exchanges, payafrik short code service, Crowd funding, and
+                  africommerce, we have developed noble solutions that will
+                  propagate a lift in productivity for the fintech industry in
+                  Africa.
                 </p>
               </div>
             </div>
@@ -207,13 +237,13 @@
         </div>
       </div>
     </section>
-    <section id="about">
+    <section id="about" class="background">
       <div class="container">
         <img id="title" src="./img/about-title.png" alt="" />
         <h3>
           <span class="bold">How</span> <span class="slim">it Works</span>
         </h3>
-        <h4>Make Payment to your Favourite Merchant</h4>
+        <h4>Commercializing by utilizing the decentralized</h4>
         <div class="row">
           <div class="col-md-5">
             <div class="left-side">
@@ -241,10 +271,30 @@
           </div>
         </div>
       </div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </section>
     <div
       class="divider-cloud-top"
-      style="background-color:#10172f"
+      style="background-color:transparent; margin-top: -180px; z-index: 999;"
       id="services-stop"
     ></div>
     <section id="services">
@@ -328,12 +378,11 @@
             </div>
           </div>
         </div>
-        <a href="#"
-          ><img
-            style="max-width:150px; margin-top: 50px"
-            src="./img/Sign up now.png"
-            alt=""
-        /></a>
+        <a href="#" class="link" style="display:inline-block">
+          <p class="styled" style="color:black; margin-top: 50px">
+            Sign up now
+          </p>
+        </a>
       </div>
     </section>
     <div
@@ -373,12 +422,13 @@
                 <input type="email" name="" placeholder="Your Email" id="" />
                 <textarea placeholder="Your Message" rows="5"> </textarea>
               </form>
-              <a href="#"
-                ><img
-                  src="./img/Submit.png"
-                  style="max-width:150px; margin-top: 30px"
-                  alt=""
-              /></a>
+              <a
+                href="#"
+                class="link"
+                style="display: inline-block; margin-top: 20px"
+              >
+                <p class="styled ">Submit</p>
+              </a>
             </div>
           </div>
         </div>

@@ -6,8 +6,27 @@
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
+@font-face {
+  font-family: "Atyla";
+  src: url("../fonts/Atyla.ttf");
+}
 html {
   scroll-behavior: smooth;
+}
+.styled {
+  font-family: "Atyla";
+  font-size: 60px;
+  word-spacing: -10px;
+  color: white;
+}
+.link {
+  transition: all 100ms ease-in;
+}
+.link:hover {
+  transform: scale(1.15, 1.15);
+  text-decoration: none;
+  /* display: inline-block; */
+  max-width: 160px;
 }
 body p {
   font-size: 17px;
@@ -111,7 +130,7 @@ header {
 }
 .divider {
   margin-top: 20px;
-  background-color: rgb(235, 188, 39);
+  background-color: #ebbc27;
   width: 66px;
   height: 5px;
 }
@@ -129,21 +148,43 @@ header {
 }
 .divider-cloud-top {
   width: 100%;
-  min-height: 400px;
+  min-height: calc(100vw / 4.5);
+  height: auto;
   background-color: #141d3a;
   background-image: url(../img/cloudtop.png);
-  background-size: cover;
-  background-position-y: top;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+
+  background-repeat: repeat-x;
+  -webkit-animation: slide 100s linear infinite;
+  animation: slide 100s linear infinite;
+}
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 bottom;
+  }
+  to {
+    background-position: -100vw bottom;
+  }
+}
+@keyframes slide {
+  from {
+    background-position: 0 bottom;
+  }
+  to {
+    background-position: -100vw bottom;
+  }
 }
 .divider-cloud-bottom {
   width: 100%;
-  min-height: 400px;
+  min-height: calc(100vw / 4.5);
+  height: auto;
   background-color: #141d3a;
   background-image: url(../img/cloudtop.png);
-  background-size: cover;
-  background-position-y: top;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  -webkit-animation: slide 100s linear infinite;
+  animation: slide 100s linear infinite;
   transform: scale(-1, -1);
 }
 #what-payafrik {
@@ -228,9 +269,11 @@ header {
 }
 #about {
   min-height: 500px;
+
   background-color: #10172f;
-  padding: 60px 0px;
+  padding: 60px 0px 170px;
   text-align: center;
+  z-index: -1;
 }
 #about #title {
   max-width: 300px;
@@ -373,4 +416,267 @@ footer .col2 .input button {
 footer .col3 {
   color: white;
   padding: 0px 0px 0px 40px;
+}
+
+/* PARTICLE JS */
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.background {
+  position: relative;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.background > span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  mix-blend-mode: screen;
+  opacity: 0.1;
+}
+.background > span:nth-child(1) {
+  color: #e45a84;
+  top: 34%;
+  left: 95%;
+  animation-duration: 15s;
+  animation-delay: -5.7s;
+  transform-origin: 13vw -21vh;
+  box-shadow: 40vmin 0 12.5686240161vmin currentColor;
+}
+.background > span:nth-child(2) {
+  color: #ffacac;
+  top: 3%;
+  left: 1%;
+  animation-duration: 11.2s;
+  animation-delay: -5.6s;
+  transform-origin: 16vw -8vh;
+  box-shadow: -40vmin 0 13.9126087551vmin currentColor;
+}
+.background > span:nth-child(3) {
+  color: #e45a84;
+  top: 93%;
+  left: 35%;
+  animation-duration: 12.4s;
+  animation-delay: -0.1s;
+  transform-origin: 14vw -1vh;
+  box-shadow: 40vmin 0 6.6701089534vmin currentColor;
+}
+.background > span:nth-child(4) {
+  color: #e45a84;
+  top: 65%;
+  left: 58%;
+  animation-duration: 14.7s;
+  animation-delay: -5.7s;
+  transform-origin: 23vw -2vh;
+  box-shadow: -40vmin 0 8.7806943444vmin currentColor;
+}
+.background > span:nth-child(5) {
+  color: #e45a84;
+  top: 83%;
+  left: 99%;
+  animation-duration: 12.2s;
+  animation-delay: -6.5s;
+  transform-origin: 16vw 5vh;
+  box-shadow: -40vmin 0 9.1549423703vmin currentColor;
+}
+.background > span:nth-child(6) {
+  color: #e45a84;
+  top: 54%;
+  left: 68%;
+  animation-duration: 13.5s;
+  animation-delay: -8.6s;
+  transform-origin: 18vw 13vh;
+  box-shadow: 40vmin 0 8.1357245225vmin currentColor;
+}
+.background > span:nth-child(7) {
+  color: #e45a84;
+  top: 98%;
+  left: 46%;
+  animation-duration: 15.6s;
+  animation-delay: -13.5s;
+  transform-origin: -7vw 13vh;
+  box-shadow: 40vmin 0 12.0746699628vmin currentColor;
+}
+.background > span:nth-child(8) {
+  color: #e45a84;
+  top: 84%;
+  left: 5%;
+  animation-duration: 15.4s;
+  animation-delay: -11.6s;
+  transform-origin: 5vw 7vh;
+  box-shadow: 40vmin 0 5.0842156627vmin currentColor;
+}
+.background > span:nth-child(9) {
+  color: #e45a84;
+  top: 18%;
+  left: 18%;
+  animation-duration: 11.4s;
+  animation-delay: -1.8s;
+  transform-origin: 21vw 10vh;
+  box-shadow: 40vmin 0 5.1678833093vmin currentColor;
+}
+.background > span:nth-child(10) {
+  color: #e45a84;
+  top: 74%;
+  left: 48%;
+  animation-duration: 13.1s;
+  animation-delay: -13.5s;
+  transform-origin: 8vw -12vh;
+  box-shadow: 40vmin 0 5.4518875306vmin currentColor;
+}
+.background > span:nth-child(11) {
+  color: #e45a84;
+  top: 15%;
+  left: 37%;
+  animation-duration: 14.2s;
+  animation-delay: -11.8s;
+  transform-origin: 6vw 20vh;
+  box-shadow: 40vmin 0 13.4708633452vmin currentColor;
+}
+.background > span:nth-child(12) {
+  color: #e45a84;
+  top: 29%;
+  left: 77%;
+  animation-duration: 11.5s;
+  animation-delay: -2s;
+  transform-origin: -6vw -13vh;
+  box-shadow: -40vmin 0 6.9191516609vmin currentColor;
+}
+.background > span:nth-child(13) {
+  color: #e45a84;
+  top: 48%;
+  left: 40%;
+  animation-duration: 15.1s;
+  animation-delay: -8.9s;
+  transform-origin: 5vw -6vh;
+  box-shadow: -40vmin 0 9.947136669vmin currentColor;
+}
+.background > span:nth-child(14) {
+  color: #ffacac;
+  top: 11%;
+  left: 27%;
+  animation-duration: 13.6s;
+  animation-delay: -2.7s;
+  transform-origin: -22vw -17vh;
+  box-shadow: 40vmin 0 7.118665373vmin currentColor;
+}
+.background > span:nth-child(15) {
+  color: #583c87;
+  top: 35%;
+  left: 14%;
+  animation-duration: 13.2s;
+  animation-delay: -10.6s;
+  transform-origin: -10vw -2vh;
+  box-shadow: 40vmin 0 11.5570327015vmin currentColor;
+}
+.background > span:nth-child(16) {
+  color: #583c87;
+  top: 36%;
+  left: 18%;
+  animation-duration: 12.7s;
+  animation-delay: -2.8s;
+  transform-origin: -12vw 21vh;
+  box-shadow: 40vmin 0 5.0537496491vmin currentColor;
+}
+.background > span:nth-child(17) {
+  color: #e45a84;
+  top: 97%;
+  left: 72%;
+  animation-duration: 12.1s;
+  animation-delay: -15.9s;
+  transform-origin: -21vw -16vh;
+  box-shadow: -40vmin 0 11.1493215381vmin currentColor;
+}
+.background > span:nth-child(18) {
+  color: #e45a84;
+  top: 91%;
+  left: 51%;
+  animation-duration: 13.4s;
+  animation-delay: -11.2s;
+  transform-origin: -22vw 23vh;
+  box-shadow: 40vmin 0 8.0477256897vmin currentColor;
+}
+.background > span:nth-child(19) {
+  color: #583c87;
+  top: 82%;
+  left: 16%;
+  animation-duration: 11.9s;
+  animation-delay: -9.5s;
+  transform-origin: 5vw 2vh;
+  box-shadow: 40vmin 0 12.0060122635vmin currentColor;
+}
+.background > span:nth-child(20) {
+  color: #583c87;
+  top: 44%;
+  left: 8%;
+  animation-duration: 10.4s;
+  animation-delay: -3.6s;
+  transform-origin: 15vw 5vh;
+  box-shadow: 40vmin 0 10.1946791273vmin currentColor;
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
 }
