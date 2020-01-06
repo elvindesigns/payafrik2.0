@@ -78,6 +78,9 @@ body p {
 .navbar-inverse .navbar-nav > li > a {
   color: white;
 }
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ebbc27;
+}
 .navbar-toggle {
   margin-top: 30px;
   margin-bottom: 25px;
@@ -274,13 +277,14 @@ header {
   padding: 60px 0px 170px;
   text-align: center;
   z-index: -1;
+  color: white;
 }
 #about #title {
   max-width: 300px;
 }
 #about h3 {
   color: white;
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: -2.5px;
   /* font-weight: 100; */
 }
@@ -291,8 +295,11 @@ header {
   /* font-weight: 100; */
 }
 #about .left-side img {
-  width: 85%;
+  width: 70%;
+  min-width: 200px;
   margin-top: 20px;
+  min-height: 200px;
+  object-fit: contain;
 }
 #about .right-side {
   padding-top: 20px;
@@ -368,6 +375,10 @@ header {
   border-bottom: 1px solid white;
   padding: 20px 0px;
   width: 100%;
+}
+#get-in-touch form input:focus,
+#get-in-touch form textarea:focus {
+  background-color: #16203d;
 }
 #get-in-touch .partners {
   display: flex;
