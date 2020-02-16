@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PayAfrik</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/myscript.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body style="height: 100vh !important; overflow: hidden;">
+    <nav class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            ><img src="./img/logo.png" alt=""
+          /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav ">
+            <!-- <li style="padding:14px 10px 10px 10px; color:white">|</li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="list-spacer"></li>
+            <li>
+              <a href="./signup.html" id="signup" onclick="closeNav()">
+                SIGN UP</a
+              >
+            </li>
+            <li class="list-spacer"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="top" style="padding-bottom: 0px;">
+      <!-- particles.js container -->
+      <div id="particles-js"></div>
+
+      <!-- scripts -->
+      <script src="./js/particles.js"></script>
+      <script src="./js/app.js"></script>
+
+      <!-- stats.js -->
+      <script src="js/lib/stats.js"></script>
+      <script>
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function() {
+          stats.begin();
+          stats.end();
+          if (
+            window.pJSDom[0].pJS.particles &&
+            window.pJSDom[0].pJS.particles.array
+          ) {
+            count_particles.innerText =
+              window.pJSDom[0].pJS.particles.array.length;
+          }
+          requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      </script>
+      <div class="container pageHolder">
+        <div class="row">
+          <div class="" style="margin: 0 auto;">
+            <div class="col-md-5 padding-0">
+              <div class="login-card-left willHide">
+                <div style="text-align: center;">
+                  <img
+                    src="./img/takeoff.png"
+                    style="width: 90%;"
+                    alt="header"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 padding-0">
+              <div class="login-card-right login-card-shadow">
+                <div class="login-content">
+                  <h3>Log Into PayAfrik Dashboard</h3>
+                  <p>Enter your login details below</p>
+                  <form action="">
+                    <label for="">Username</label>
+                    <div class="input-holder">
+                      <img src="./img/user.png" alt="" />
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Enter your username"
+                      />
+                    </div>
+
+                    <div
+                      style="display: flex; justify-content: space-between; align-items: center;"
+                    >
+                      <label for="">Password</label>
+                      <a href="">forgot your password?</a>
+                    </div>
+                    <div class="input-holder">
+                      <img src="./img/lock.png" alt="" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="Enter you password"
+                      />
+                    </div>
+
+                    <button>LOG IN</button>
+                    <div
+                      style="display: flex; justify-content:start;  align-items: center; margin-top: 30px;"
+                    >
+                      <a href=""
+                        >&nbsp;New to PayAfrik? Click here to Sign Up</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider-cloud-top" id="what-payafrik-stop"></div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PayAfrik</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/myscript.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="authbody" style="overflow: visible !important;">
+    <nav class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./img/logo.png" alt=""
+          /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav ">
+            <!-- <li style="padding:14px 10px 10px 10px; color:white">|</li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="list-spacer"></li>
+
+            <li class="list-spacer"></li>
+            <li>
+              <a href="./login.html" id="login" onclick="closeNav()"> LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="top" style="padding-bottom: 0px;">
+      <!-- particles.js container -->
+      <div id="particles-js"></div>
+
+      <!-- scripts -->
+      <script src="./js/particles.js"></script>
+      <script src="./js/app.js"></script>
+
+      <!-- stats.js -->
+      <script src="js/lib/stats.js"></script>
+      <script>
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function() {
+          stats.begin();
+          stats.end();
+          if (
+            window.pJSDom[0].pJS.particles &&
+            window.pJSDom[0].pJS.particles.array
+          ) {
+            count_particles.innerText =
+              window.pJSDom[0].pJS.particles.array.length;
+          }
+          requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      </script>
+      <div class="container pageHolder">
+        <div class="row">
+          <div class="" style="margin: 0 auto;">
+            <div class="col-md-5 padding-0">
+              <div class="login-card-left willHide">
+                <div style="text-align: center;">
+                  <img
+                    src="./img/takeoff.png"
+                    style="width: 90%;"
+                    alt="header"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 padding-0">
+              <div class="login-card-right login-card-shadow">
+                <div class="login-content">
+                  <h3>Create an Account with PayAfrik</h3>
+
+                  <form action="">
+                    <label for="">Username</label>
+                    <div class="input-holder">
+                      <img src="./img/user.png" alt="" />
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Enter your username"
+                      />
+                    </div>
+                    <label for="">Email Address</label>
+                    <div class="input-holder">
+                      <img src="./img/email2.png" alt="" />
+                      <input
+                        type="email"
+                        name=""
+                        id=""
+                        placeholder="Enter your Email Address"
+                      />
+                    </div>
+                    <label for="">Phone</label>
+                    <div class="input-holder">
+                      <img src="./img/molumen-phone-icon.png" alt="" />
+                      <select
+                        id="+234"
+                        style="position: absolute; width: 60px; margin: 2px 0px 0px 50px; padding: 13px 13px 13px 0; border: none;"
+                      >
+                        <option data-v-5b094e26="" value="+234"
+                          >+234 - Nigeria</option
+                        >
+                        <option data-v-5b094e26="" value="+7 840"
+                          >+7 840 - Abkhazia</option
+                        ><option data-v-5b094e26="" value="+93"
+                          >+93 - Afghanistan</option
+                        ><option data-v-5b094e26="" value="+355"
+                          >+355 - Albania</option
+                        ><option data-v-5b094e26="" value="+213"
+                          >+213 - Algeria</option
+                        ><option data-v-5b094e26="" value="+1 684"
+                          >+1 684 - American Samoa</option
+                        ><option data-v-5b094e26="" value="+376"
+                          >+376 - Andorra</option
+                        ><option data-v-5b094e26="" value="+244"
+                          >+244 - Angola</option
+                        ><option data-v-5b094e26="" value="+1 264"
+                          >+1 264 - Anguilla</option
+                        ><option data-v-5b094e26="" value="+1 268"
+                          >+1 268 - Antigua and Barbuda</option
+                        ><option data-v-5b094e26="" value="+54"
+                          >+54 - Argentina</option
+                        ><option data-v-5b094e26="" value="+374"
+                          >+374 - Armenia</option
+                        ><option data-v-5b094e26="" value="+297"
+                          >+297 - Aruba</option
+                        ><option data-v-5b094e26="" value="+247"
+                          >+247 - Ascension</option
+                        ><option data-v-5b094e26="" value="+61"
+                          >+61 - Australia</option
+                        ><option data-v-5b094e26="" value="+672"
+                          >+672 - Australian External Territories</option
+                        ><option data-v-5b094e26="" value="+43"
+                          >+43 - Austria</option
+                        ><option data-v-5b094e26="" value="+994"
+                          >+994 - Azerbaijan</option
+                        ><option data-v-5b094e26="" value="+1 242"
+                          >+1 242 - Bahamas</option
+                        ><option data-v-5b094e26="" value="+973"
+                          >+973 - Bahrain</option
+                        ><option data-v-5b094e26="" value="+880"
+                          >+880 - Bangladesh</option
+                        ><option data-v-5b094e26="" value="+1 246"
+                          >+1 246 - Barbados</option
+                        ><option data-v-5b094e26="" value="+1 268"
+                          >+1 268 - Barbuda</option
+                        ><option data-v-5b094e26="" value="+375"
+                          >+375 - Belarus</option
+                        ><option data-v-5b094e26="" value="+32"
+                          >+32 - Belgium</option
+                        ><option data-v-5b094e26="" value="+501"
+                          >+501 - Belize</option
+                        ><option data-v-5b094e26="" value="+229"
+                          >+229 - Benin</option
+                        ><option data-v-5b094e26="" value="+1 441"
+                          >+1 441 - Bermuda</option
+                        ><option data-v-5b094e26="" value="+975"
+                          >+975 - Bhutan</option
+                        ><option data-v-5b094e26="" value="+591"
+                          >+591 - Bolivia</option
+                        ><option data-v-5b094e26="" value="+387"
+                          >+387 - Bosnia and Herzegovina</option
+                        ><option data-v-5b094e26="" value="+267"
+                          >+267 - Botswana</option
+                        ><option data-v-5b094e26="" value="+55"
+                          >+55 - Brazil</option
+                        ><option data-v-5b094e26="" value="+246"
+                          >+246 - British Indian Ocean Territory</option
+                        ><option data-v-5b094e26="" value="+1 284"
+                          >+1 284 - British Virgin Islands</option
+                        ><option data-v-5b094e26="" value="+673"
+                          >+673 - Brunei</option
+                        ><option data-v-5b094e26="" value="+359"
+                          >+359 - Bulgaria</option
+                        ><option data-v-5b094e26="" value="+226"
+                          >+226 - Burkina Faso</option
+                        ><option data-v-5b094e26="" value="+257"
+                          >+257 - Burundi</option
+                        ><option data-v-5b094e26="" value="+855"
+                          >+855 - Cambodia</option
+                        ><option data-v-5b094e26="" value="+237"
+                          >+237 - Cameroon</option
+                        ><option data-v-5b094e26="" value="+1"
+                          >+1 - Canada</option
+                        ><option data-v-5b094e26="" value="+238"
+                          >+238 - Cape Verde</option
+                        ><option data-v-5b094e26="" value="+ 345"
+                          >+ 345 - Cayman Islands</option
+                        ><option data-v-5b094e26="" value="+236"
+                          >+236 - Central African Republic</option
+                        ><option data-v-5b094e26="" value="+235"
+                          >+235 - Chad</option
+                        ><option data-v-5b094e26="" value="+56"
+                          >+56 - Chile</option
+                        ><option data-v-5b094e26="" value="+86"
+                          >+86 - China</option
+                        ><option data-v-5b094e26="" value="+61"
+                          >+61 - Christmas Island</option
+                        ><option data-v-5b094e26="" value="+61"
+                          >+61 - Cocos-Keeling Islands</option
+                        ><option data-v-5b094e26="" value="+57"
+                          >+57 - Colombia</option
+                        ><option data-v-5b094e26="" value="+269"
+                          >+269 - Comoros</option
+                        ><option data-v-5b094e26="" value="+242"
+                          >+242 - Congo</option
+                        ><option data-v-5b094e26="" value="+243"
+                          >+243 - Congo, Dem. Rep. of (Zaire)</option
+                        ><option data-v-5b094e26="" value="+682"
+                          >+682 - Cook Islands</option
+                        ><option data-v-5b094e26="" value="+506"
+                          >+506 - Costa Rica</option
+                        ><option data-v-5b094e26="" value="+385"
+                          >+385 - Croatia</option
+                        ><option data-v-5b094e26="" value="+53"
+                          >+53 - Cuba</option
+                        ><option data-v-5b094e26="" value="+599"
+                          >+599 - Curacao</option
+                        ><option data-v-5b094e26="" value="+537"
+                          >+537 - Cyprus</option
+                        ><option data-v-5b094e26="" value="+420"
+                          >+420 - Czech Republic</option
+                        ><option data-v-5b094e26="" value="+45"
+                          >+45 - Denmark</option
+                        ><option data-v-5b094e26="" value="+246"
+                          >+246 - Diego Garcia</option
+                        ><option data-v-5b094e26="" value="+253"
+                          >+253 - Djibouti</option
+                        ><option data-v-5b094e26="" value="+1 767"
+                          >+1 767 - Dominica</option
+                        ><option data-v-5b094e26="" value="+1 809"
+                          >+1 809 - Dominican Republic</option
+                        ><option data-v-5b094e26="" value="+670"
+                          >+670 - East Timor</option
+                        ><option data-v-5b094e26="" value="+56"
+                          >+56 - Easter Island</option
+                        ><option data-v-5b094e26="" value="+593"
+                          >+593 - Ecuador</option
+                        ><option data-v-5b094e26="" value="+20"
+                          >+20 - Egypt</option
+                        ><option data-v-5b094e26="" value="+503"
+                          >+503 - El Salvador</option
+                        ><option data-v-5b094e26="" value="+240"
+                          >+240 - Equatorial Guinea</option
+                        ><option data-v-5b094e26="" value="+291"
+                          >+291 - Eritrea</option
+                        ><option data-v-5b094e26="" value="+372"
+                          >+372 - Estonia</option
+                        ><option data-v-5b094e26="" value="+251"
+                          >+251 - Ethiopia</option
+                        ><option data-v-5b094e26="" value="+500"
+                          >+500 - Falkland Islands</option
+                        ><option data-v-5b094e26="" value="+298"
+                          >+298 - Faroe Islands</option
+                        ><option data-v-5b094e26="" value="+679"
+                          >+679 - Fiji</option
+                        ><option data-v-5b094e26="" value="+358"
+                          >+358 - Finland</option
+                        ><option data-v-5b094e26="" value="+33"
+                          >+33 - France</option
+                        ><option data-v-5b094e26="" value="+596"
+                          >+596 - French Antilles</option
+                        ><option data-v-5b094e26="" value="+594"
+                          >+594 - French Guiana</option
+                        ><option data-v-5b094e26="" value="+689"
+                          >+689 - French Polynesia</option
+                        ><option data-v-5b094e26="" value="+241"
+                          >+241 - Gabon</option
+                        ><option data-v-5b094e26="" value="+220"
+                          >+220 - Gambia</option
+                        ><option data-v-5b094e26="" value="+995"
+                          >+995 - Georgia</option
+                        ><option data-v-5b094e26="" value="+49"
+                          >+49 - Germany</option
+                        ><option data-v-5b094e26="" value="+233"
+                          >+233 - Ghana</option
+                        ><option data-v-5b094e26="" value="+350"
+                          >+350 - Gibraltar</option
+                        ><option data-v-5b094e26="" value="+30"
+                          >+30 - Greece</option
+                        ><option data-v-5b094e26="" value="+299"
+                          >+299 - Greenland</option
+                        ><option data-v-5b094e26="" value="+1 473"
+                          >+1 473 - Grenada</option
+                        ><option data-v-5b094e26="" value="+590"
+                          >+590 - Guadeloupe</option
+                        ><option data-v-5b094e26="" value="+1 671"
+                          >+1 671 - Guam</option
+                        ><option data-v-5b094e26="" value="+502"
+                          >+502 - Guatemala</option
+                        ><option data-v-5b094e26="" value="+224"
+                          >+224 - Guinea</option
+                        ><option data-v-5b094e26="" value="+245"
+                          >+245 - Guinea-Bissau</option
+                        ><option data-v-5b094e26="" value="+595"
+                          >+595 - Guyana</option
+                        ><option data-v-5b094e26="" value="+509"
+                          >+509 - Haiti</option
+                        ><option data-v-5b094e26="" value="+504"
+                          >+504 - Honduras</option
+                        ><option data-v-5b094e26="" value="+852"
+                          >+852 - Hong Kong SAR China</option
+                        ><option data-v-5b094e26="" value="+36"
+                          >+36 - Hungary</option
+                        ><option data-v-5b094e26="" value="+354"
+                          >+354 - Iceland</option
+                        ><option data-v-5b094e26="" value="+91"
+                          >+91 - India</option
+                        ><option data-v-5b094e26="" value="+62"
+                          >+62 - Indonesia</option
+                        ><option data-v-5b094e26="" value="+98"
+                          >+98 - Iran</option
+                        ><option data-v-5b094e26="" value="+964"
+                          >+964 - Iraq</option
+                        ><option data-v-5b094e26="" value="+353"
+                          >+353 - Ireland</option
+                        ><option data-v-5b094e26="" value="+972"
+                          >+972 - Israel</option
+                        ><option data-v-5b094e26="" value="+39"
+                          >+39 - Italy</option
+                        ><option data-v-5b094e26="" value="+225"
+                          >+225 - Ivory Coast</option
+                        ><option data-v-5b094e26="" value="+1 876"
+                          >+1 876 - Jamaica</option
+                        ><option data-v-5b094e26="" value="+81"
+                          >+81 - Japan</option
+                        ><option data-v-5b094e26="" value="+962"
+                          >+962 - Jordan</option
+                        ><option data-v-5b094e26="" value="+7 7"
+                          >+7 7 - Kazakhstan</option
+                        ><option data-v-5b094e26="" value="+254"
+                          >+254 - Kenya</option
+                        ><option data-v-5b094e26="" value="+686"
+                          >+686 - Kiribati</option
+                        ><option data-v-5b094e26="" value="+965"
+                          >+965 - Kuwait</option
+                        ><option data-v-5b094e26="" value="+996"
+                          >+996 - Kyrgyzstan</option
+                        ><option data-v-5b094e26="" value="+856"
+                          >+856 - Laos</option
+                        ><option data-v-5b094e26="" value="+371"
+                          >+371 - Latvia</option
+                        ><option data-v-5b094e26="" value="+961"
+                          >+961 - Lebanon</option
+                        ><option data-v-5b094e26="" value="+266"
+                          >+266 - Lesotho</option
+                        ><option data-v-5b094e26="" value="+231"
+                          >+231 - Liberia</option
+                        ><option data-v-5b094e26="" value="+218"
+                          >+218 - Libya</option
+                        ><option data-v-5b094e26="" value="+423"
+                          >+423 - Liechtenstein</option
+                        ><option data-v-5b094e26="" value="+370"
+                          >+370 - Lithuania</option
+                        ><option data-v-5b094e26="" value="+352"
+                          >+352 - Luxembourg</option
+                        ><option data-v-5b094e26="" value="+853"
+                          >+853 - Macau SAR China</option
+                        ><option data-v-5b094e26="" value="+389"
+                          >+389 - Macedonia</option
+                        ><option data-v-5b094e26="" value="+261"
+                          >+261 - Madagascar</option
+                        ><option data-v-5b094e26="" value="+265"
+                          >+265 - Malawi</option
+                        ><option data-v-5b094e26="" value="+60"
+                          >+60 - Malaysia</option
+                        ><option data-v-5b094e26="" value="+960"
+                          >+960 - Maldives</option
+                        ><option data-v-5b094e26="" value="+223"
+                          >+223 - Mali</option
+                        ><option data-v-5b094e26="" value="+356"
+                          >+356 - Malta</option
+                        ><option data-v-5b094e26="" value="+692"
+                          >+692 - Marshall Islands</option
+                        ><option data-v-5b094e26="" value="+596"
+                          >+596 - Martinique</option
+                        ><option data-v-5b094e26="" value="+222"
+                          >+222 - Mauritania</option
+                        ><option data-v-5b094e26="" value="+230"
+                          >+230 - Mauritius</option
+                        ><option data-v-5b094e26="" value="+262"
+                          >+262 - Mayotte</option
+                        ><option data-v-5b094e26="" value="+52"
+                          >+52 - Mexico</option
+                        ><option data-v-5b094e26="" value="+691"
+                          >+691 - Micronesia</option
+                        ><option data-v-5b094e26="" value="+1 808"
+                          >+1 808 - Midway Island</option
+                        ><option data-v-5b094e26="" value="+373"
+                          >+373 - Moldova</option
+                        ><option data-v-5b094e26="" value="+377"
+                          >+377 - Monaco</option
+                        ><option data-v-5b094e26="" value="+976"
+                          >+976 - Mongolia</option
+                        ><option data-v-5b094e26="" value="+382"
+                          >+382 - Montenegro</option
+                        ><option data-v-5b094e26="" value="+1664"
+                          >+1664 - Montserrat</option
+                        ><option data-v-5b094e26="" value="+212"
+                          >+212 - Morocco</option
+                        ><option data-v-5b094e26="" value="+95"
+                          >+95 - Myanmar</option
+                        ><option data-v-5b094e26="" value="+264"
+                          >+264 - Namibia</option
+                        ><option data-v-5b094e26="" value="+674"
+                          >+674 - Nauru</option
+                        ><option data-v-5b094e26="" value="+977"
+                          >+977 - Nepal</option
+                        ><option data-v-5b094e26="" value="+31"
+                          >+31 - Netherlands</option
+                        ><option data-v-5b094e26="" value="+599"
+                          >+599 - Netherlands Antilles</option
+                        ><option data-v-5b094e26="" value="+1 869"
+                          >+1 869 - Nevis</option
+                        ><option data-v-5b094e26="" value="+687"
+                          >+687 - New Caledonia</option
+                        ><option data-v-5b094e26="" value="+64"
+                          >+64 - New Zealand</option
+                        ><option data-v-5b094e26="" value="+505"
+                          >+505 - Nicaragua</option
+                        ><option data-v-5b094e26="" value="+227"
+                          >+227 - Niger</option
+                        ><option data-v-5b094e26="" value="+234"
+                          >+234 - Nigeria</option
+                        ><option data-v-5b094e26="" value="+683"
+                          >+683 - Niue</option
+                        ><option data-v-5b094e26="" value="+672"
+                          >+672 - Norfolk Island</option
+                        ><option data-v-5b094e26="" value="+850"
+                          >+850 - North Korea</option
+                        ><option data-v-5b094e26="" value="+1 670"
+                          >+1 670 - Northern Mariana Islands</option
+                        ><option data-v-5b094e26="" value="+47"
+                          >+47 - Norway</option
+                        ><option data-v-5b094e26="" value="+968"
+                          >+968 - Oman</option
+                        ><option data-v-5b094e26="" value="+92"
+                          >+92 - Pakistan</option
+                        ><option data-v-5b094e26="" value="+680"
+                          >+680 - Palau</option
+                        ><option data-v-5b094e26="" value="+970"
+                          >+970 - Palestinian Territory</option
+                        ><option data-v-5b094e26="" value="+507"
+                          >+507 - Panama</option
+                        ><option data-v-5b094e26="" value="+675"
+                          >+675 - Papua New Guinea</option
+                        ><option data-v-5b094e26="" value="+595"
+                          >+595 - Paraguay</option
+                        ><option data-v-5b094e26="" value="+51"
+                          >+51 - Peru</option
+                        ><option data-v-5b094e26="" value="+63"
+                          >+63 - Philippines</option
+                        ><option data-v-5b094e26="" value="+48"
+                          >+48 - Poland</option
+                        ><option data-v-5b094e26="" value="+351"
+                          >+351 - Portugal</option
+                        ><option data-v-5b094e26="" value="+1 787"
+                          >+1 787 - Puerto Rico</option
+                        ><option data-v-5b094e26="" value="+974"
+                          >+974 - Qatar</option
+                        ><option data-v-5b094e26="" value="+262"
+                          >+262 - Reunion</option
+                        ><option data-v-5b094e26="" value="+40"
+                          >+40 - Romania</option
+                        ><option data-v-5b094e26="" value="+7"
+                          >+7 - Russia</option
+                        ><option data-v-5b094e26="" value="+250"
+                          >+250 - Rwanda</option
+                        ><option data-v-5b094e26="" value="+685"
+                          >+685 - Samoa</option
+                        ><option data-v-5b094e26="" value="+378"
+                          >+378 - San Marino</option
+                        ><option data-v-5b094e26="" value="+966"
+                          >+966 - Saudi Arabia</option
+                        ><option data-v-5b094e26="" value="+221"
+                          >+221 - Senegal</option
+                        ><option data-v-5b094e26="" value="+381"
+                          >+381 - Serbia</option
+                        ><option data-v-5b094e26="" value="+248"
+                          >+248 - Seychelles</option
+                        ><option data-v-5b094e26="" value="+232"
+                          >+232 - Sierra Leone</option
+                        ><option data-v-5b094e26="" value="+65"
+                          >+65 - Singapore</option
+                        ><option data-v-5b094e26="" value="+421"
+                          >+421 - Slovakia</option
+                        ><option data-v-5b094e26="" value="+386"
+                          >+386 - Slovenia</option
+                        ><option data-v-5b094e26="" value="+677"
+                          >+677 - Solomon Islands</option
+                        ><option data-v-5b094e26="" value="+27"
+                          >+27 - South Africa</option
+                        ><option data-v-5b094e26="" value="+500"
+                          >+500 - South Georgia and the South Sandwich
+                          Islands</option
+                        ><option data-v-5b094e26="" value="+82"
+                          >+82 - South Korea</option
+                        ><option data-v-5b094e26="" value="+34"
+                          >+34 - Spain</option
+                        ><option data-v-5b094e26="" value="+94"
+                          >+94 - Sri Lanka</option
+                        ><option data-v-5b094e26="" value="+249"
+                          >+249 - Sudan</option
+                        ><option data-v-5b094e26="" value="+597"
+                          >+597 - Suriname</option
+                        ><option data-v-5b094e26="" value="+268"
+                          >+268 - Swaziland</option
+                        ><option data-v-5b094e26="" value="+46"
+                          >+46 - Sweden</option
+                        ><option data-v-5b094e26="" value="+41"
+                          >+41 - Switzerland</option
+                        ><option data-v-5b094e26="" value="+963"
+                          >+963 - Syria</option
+                        ><option data-v-5b094e26="" value="+886"
+                          >+886 - Taiwan</option
+                        ><option data-v-5b094e26="" value="+992"
+                          >+992 - Tajikistan</option
+                        ><option data-v-5b094e26="" value="+255"
+                          >+255 - Tanzania</option
+                        ><option data-v-5b094e26="" value="+66"
+                          >+66 - Thailand</option
+                        ><option data-v-5b094e26="" value="+670"
+                          >+670 - Timor Leste</option
+                        ><option data-v-5b094e26="" value="+228"
+                          >+228 - Togo</option
+                        ><option data-v-5b094e26="" value="+690"
+                          >+690 - Tokelau</option
+                        ><option data-v-5b094e26="" value="+676"
+                          >+676 - Tonga</option
+                        ><option data-v-5b094e26="" value="+1 868"
+                          >+1 868 - Trinidad and Tobago</option
+                        ><option data-v-5b094e26="" value="+216"
+                          >+216 - Tunisia</option
+                        ><option data-v-5b094e26="" value="+90"
+                          >+90 - Turkey</option
+                        ><option data-v-5b094e26="" value="+993"
+                          >+993 - Turkmenistan</option
+                        ><option data-v-5b094e26="" value="+1 649"
+                          >+1 649 - Turks and Caicos Islands</option
+                        ><option data-v-5b094e26="" value="+688"
+                          >+688 - Tuvalu</option
+                        ><option data-v-5b094e26="" value="+1 340"
+                          >+1 340 - U.S. Virgin Islands</option
+                        ><option data-v-5b094e26="" value="+256"
+                          >+256 - Uganda</option
+                        ><option data-v-5b094e26="" value="+380"
+                          >+380 - Ukraine</option
+                        ><option data-v-5b094e26="" value="+971"
+                          >+971 - United Arab Emirates</option
+                        ><option data-v-5b094e26="" value="+44"
+                          >+44 - United Kingdom</option
+                        ><option data-v-5b094e26="" value="+1"
+                          >+1 - United States</option
+                        ><option data-v-5b094e26="" value="+598"
+                          >+598 - Uruguay</option
+                        ><option data-v-5b094e26="" value="+998"
+                          >+998 - Uzbekistan</option
+                        ><option data-v-5b094e26="" value="+678"
+                          >+678 - Vanuatu</option
+                        ><option data-v-5b094e26="" value="+58"
+                          >+58 - Venezuela</option
+                        ><option data-v-5b094e26="" value="+84"
+                          >+84 - Vietnam</option
+                        ><option data-v-5b094e26="" value="+1 808"
+                          >+1 808 - Wake Island</option
+                        ><option data-v-5b094e26="" value="+681"
+                          >+681 - Wallis and Futuna</option
+                        ><option data-v-5b094e26="" value="+967"
+                          >+967 - Yemen</option
+                        ><option data-v-5b094e26="" value="+260"
+                          >+260 - Zambia</option
+                        ><option data-v-5b094e26="" value="+255"
+                          >+255 - Zanzibar</option
+                        ><option data-v-5b094e26="" value="+263"
+                          >+263 - Zimbabwe</option
+                        >
+                      </select>
+                      <input
+                        style="padding-left: 150px !important;"
+                        type="tel"
+                        name=""
+                        id=""
+                        placeholder="Enter Phone Number"
+                      />
+                    </div>
+
+                    <div
+                      style="display: flex; justify-content: space-between; align-items: center;"
+                    >
+                      <label for="">Password</label>
+                    </div>
+                    <div class="input-holder">
+                      <img src="./img/lock.png" alt="" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="Enter your password"
+                      />
+                    </div>
+                    <label for="" style="font-weight: 400;"
+                      >A good password should be at least 8 characters long,
+                      contain a number, a special character (!@#$%), a capital
+                      letter</label
+                    >
+                    <div class="input-holder">
+                      <img src="./img/lock.png" alt="" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="Confirm your password"
+                      />
+                    </div>
+                    <p>
+                      By clicking button below, you agree to Payafrik's<a
+                        href=""
+                        >&nbsp; terms of acceptable use</a
+                      >
+                    </p>
+
+                    <button>CREATE ACCOUNT</button>
+                    <div
+                      style="display: flex; justify-content:start;  align-items: center; margin-top: 30px;"
+                    ></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider-cloud-top" id="what-payafrik-stop"></div>
+    </header>
+  </body>
+</html>
