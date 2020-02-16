@@ -768,8 +768,8 @@ canvas {
   border-radius: 5px;
 }
 .authbody {
-  height: 100vh;
-  overflow: hidden;
+  /* height: 100vh; */
+  overflow: visible;
 }
 @media only screen and (max-width: 991px) {
   .willHide {
