@@ -331,6 +331,9 @@ header {
   /* letter-spacing: -2.5px; */
   /* font-weight: 100; */
 }
+#services p {
+  font-weight: 300;
+}
 #services .card {
   margin-top: 40px;
 }
